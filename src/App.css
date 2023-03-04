@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: #f7f7f7;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 120px);
+  text-align: center;
+  gap: 10px;
+}
+.game div {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 50px;
+  background: #fff;
+  border: 2px solid #696969;
+}
+
+hr {
+  font-weight: bold;
+  height: 3px;
+  background: #000;
+  margin-bottom: 10px;
+}
+.div-vencedor {
+  text-align: center;
+  margin-top: 50px;
+}
+.div-vencedor button {
+  margin-top: 10px;
+  padding: 5px 15px;
+  font-size: 1.1em;
+  background: #836fff;
+  border: none;
+  color: #fff;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.div-vencedor button:hover {
+  background: #696969;
+}
+.cell:not(.O):not(.X):hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
+.cell.O {
+  background-color: #ffa07a;
+}
+.cell.X {
+  background-color: #87cefa;
+}
+.cell.O,
+.cell.X,
+.gameover,
+.cell {
+  cursor: not-allowed;
+}
+.winner-message {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  gap: 10px;
+}
+.winner-message p.O {
+  color: #87cefa;
+}
+.winner-message p.X {
+  color: #ffa07a;
+}
+@media (max-width: 380px) {
+  .game {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    text-align: center;
+    gap: 10px;
+  }
+}
